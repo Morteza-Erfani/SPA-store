@@ -6,12 +6,15 @@ import cartIcon from "../../assets/shopping-cart-2030.svg";
 
 // Context
 import { cartContext } from "../../context/CartContextProvider";
+import { userContext } from "../../context/UserContextProvider";
 
 // Styles
 import "./Navbar.scss";
 
 const Navbar = () => {
   const { cart } = useContext(cartContext);
+  const { user } = useContext(userContext);
+  const { name, email, login } = user;
 
   return (
     <div className="navMainContainer">
@@ -20,13 +23,19 @@ const Navbar = () => {
           Products
         </Link>
         <div className="navIconContainer">
-          <Link className="navProductLink" to="/signup">
-            Login/Sign Up
-          </Link>
+          {!login ? (
+            <Link className="navLoginLink" to="/signup">
+              Login
+            </Link>
+          ) : (
+            <Link className="navNameLink" to="/signup">
+              {name} <span className="navEmail">{email}</span>
+            </Link>
+          )}
           <Link to="/cart">
             <img src={cartIcon} alt="cart" />
           </Link>
-          <span>{cart.sumQuantity}</span>
+          <span className="navQuantity" >{cart.sumQuantity}</span>
         </div>
       </div>
     </div>

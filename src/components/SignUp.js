@@ -11,7 +11,7 @@ import { cartContext } from "../context/CartContextProvider";
 import "./SignUp.scss";
 
 // Functions
-import { validate } from "../helpers/functions";
+import { validate } from "../helpers/validate";
 
 const SignUp = () => {
   const { user, userdispatch } = useContext(userContext);

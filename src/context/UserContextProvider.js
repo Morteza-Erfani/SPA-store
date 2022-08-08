@@ -1,24 +1,28 @@
 import React, { createContext, useReducer } from "react";
 
+// Functions
+import { getPrevUser } from "../helpers/functions";
+
 export const userContext = createContext();
 
-const initialUser = {
-  name: "",
-  email: "",
-  login: false,
-};
+const initialUser = getPrevUser();
 
 const userReducer = (user, action) => {
   switch (action.type) {
     case "LOGIN":
       console.log(user);
-      return {
+      const localData = {
         name: action.payload.name,
         email: action.payload.email,
         login: true,
       };
+      localStorage.setItem("user", JSON.stringify(localData));
+      return {
+        ...localData,
+      };
 
     case "LOGOUT":
+      localStorage.removeItem("user");
       return {
         name: "",
         email: "",
