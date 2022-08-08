@@ -1,0 +1,217 @@
+.signContainer {
+  background-color: #f9f9f9;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  display: flex;
+
+  .SignFormContainer {
+    border: 1px solid silver;
+    width: fit-content;
+    padding: 50px;
+    margin: 50px;
+    border-radius: 10px;
+    height: fit-content;
+    background-color: #fff;
+
+    .signHeader {
+      text-align: left;
+      margin-bottom: 40px;
+      font-size: 1.8rem;
+      color: #1a73e8;
+    }
+
+    .signFormField {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 10px;
+      height: 75px;
+
+      label {
+        text-align: left;
+        margin-bottom: 5px;
+        color: rgb(85, 85, 85);
+        font-size: 0.9rem;
+      }
+
+      .signFormInput {
+        width: 300px;
+        height: 30px;
+        border-radius: 5px;
+        padding: 0 10px;
+        border: 1px solid silver;
+        transition: all 0.2s ease-in;
+      }
+
+      .signUncompleted {
+        width: 300px;
+        height: 30px;
+        border-radius: 5px;
+        padding: 0 10px;
+        border: 1px solid red;
+        transition: all 0.2s ease-in;
+      }
+
+      .signFormInput:focus,
+      .signUncompleted:focus {
+        outline: none;
+        line-height: 30px;
+        height: 30px;
+        border: 1px solid #1a73e8;
+      }
+
+      span {
+        height: 10px;
+        text-align: left;
+        margin-top: 5px;
+        width: fit-content;
+        font-size: 0.7rem;
+        color: red;
+        line-height: 10px;
+        padding: 2px 3px;
+        border-radius: 3px;
+        background-color: rgba(255, 0, 0, 0.175);
+      }
+
+      .signCheckBoxContainer {
+        display: flex;
+        font-size: 0.85rem;
+        flex-direction: row !important;
+        align-items: center;
+        height: 20px !important;
+        text-align: center;
+
+        label {
+          color: #1a73e8;
+        }
+
+        span {
+          width: min-content;
+          flex-wrap: wrap;
+          height: auto;
+        }
+      }
+
+      input[type="checkbox"] {
+        margin-left: 20px;
+        width: 18px;
+        height: 18px;
+        border: 1px solid #1a73e8;
+        appearance: none;
+        border-radius: 5px;
+        transition: all 0.2s ease-in;
+
+        &:checked {
+          background-color: #1a73e8;
+          border-radius: 50%;
+        }
+
+        &:focus {
+          border: 2px solid #022758;
+          outline: none;
+        }
+      }
+    }
+
+    .signFormButton {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      button {
+        background-color: #1a73e8;
+        padding: 10px 20px;
+        color: #fff;
+        border-radius: 5px;
+        border: none;
+        font-size: 0.875rem;
+        font-weight: 500;
+        transition: all 0.1s ease-in;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #004aaa;
+        }
+      }
+
+      a {
+        color: #1a73e8;
+        text-decoration: none;
+        transition: all 0.1s ease-in;
+        font-weight: 700;
+
+        &:hover {
+          color: #004aaa;
+        }
+      }
+    }
+  }
+
+  .signLogged {
+    h3 {
+      color: #167d32;
+      margin: 30px 0 50px;
+      font-size: 1.2rem;
+    }
+
+    div {
+      display: flex;
+      justify-content: space-between;
+      width: 350px;
+    }
+
+    a {
+      background-color: #1a73e8;
+      display: inline-block;
+      text-decoration: none;
+      color: #fff;
+      // height: 30px;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      width: 120px;
+      font-weight: bold;
+      line-height: 30px;
+      font-size: 0.875rem;
+      box-shadow: rgba(50, 50, 93, 0.25) 0 4px 12px -2px,
+        rgba(0, 0, 0, 0.3) 0 3px 7px -3px;
+      // margin-left: 5px;
+
+      &:hover {
+        background-color: #004aaa;
+      }
+    }
+
+    button {
+      background-color: #1a73e8;
+      padding: 10px 20px;
+      color: #fff;
+      border-radius: 5px;
+      border: none;
+      font-size: 0.875rem;
+      font-weight: bold;
+      transition: all 0.1s ease-in;
+      cursor: pointer;
+      box-shadow: rgba(50, 50, 93, 0.25) 0 4px 12px -2px,
+        rgba(0, 0, 0, 0.3) 0 3px 7px -3px;
+
+      &:hover {
+        background-color: #004aaa;
+      }
+    }
+  }
+}
+
+@media (max-width: 440px) {
+  .signFormContainer {
+    padding: 20px;
+    margin: 50px 20px;
+    width: 90%;
+
+    .signFormInput,
+    .signUncompleted {
+      width: 90%;
+    }
+  }
+}

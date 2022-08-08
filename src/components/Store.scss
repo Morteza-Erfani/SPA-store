@@ -1,0 +1,28 @@
+.storeContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 150px;
+  padding: 0 150px;
+}
+
+@media (max-width: 1200px) {
+  .storeContainer {
+    padding: 15px 80px;
+    margin-top: 110px;
+  }
+}
+
+@media (max-width: 768px) {
+  .storeContainer {
+    padding: 15px 40px;
+  }
+}
+
+@media (max-width: 555px) {
+  .storeContainer {
+    padding: 15px 10px;
+    justify-content: center;
+  }
+}
