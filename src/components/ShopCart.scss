@@ -103,19 +103,19 @@
   }
 }
 
-@media (max-width: 1050px) {
+@media screen and (max-width: 1050px) {
   .shopContainer {
-    flex-direction: column-reverse;
+    flex-direction: column;
     margin: 120px 80px 50px;
     align-items: center;
   }
 
   .shopCartContainer {
-    width: 100%;
+    width: 100% !important;
   }
 
   .shopPayments {
-    width: 100%;
+    width: 80% !important;
     margin-bottom: 20px;
   }
 }

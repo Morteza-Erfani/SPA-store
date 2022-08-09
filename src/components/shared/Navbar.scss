@@ -120,18 +120,18 @@
 
 @media (max-width: 1200px) {
   .navContainer {
-    padding: 15px 80px;
+    padding: 15px 80px !important;
   }
 }
 
 @media (max-width: 768px) {
   .navContainer {
-    padding: 15px 40px;
+    padding: 15px 40px !important;
   }
 }
 
 @media (max-width: 555px) {
   .navContainer {
-    padding: 15px 20px;
+    padding: 15px 20px !important;
   }
 }
