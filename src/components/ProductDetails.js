@@ -13,11 +13,11 @@ const ProductDetails = () => {
   const index = param.id - 1;
   const data = products[index];
   console.log(data);
-  const { title, price, description, category, images } = data;
+  const { title, price, description, category, image } = data;
 
   return (
     <div className="detContainer">
-      <img className="detImage" src={images[0]} alt="product" />
+      <img className="detImage" src={image} alt="product" />
       <div className="detTextContainer">
         <h3>{title}</h3>
         <p className="detDescription">{description}</p>

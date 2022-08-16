@@ -15,12 +15,12 @@ import "./Product.scss";
 
 const Product = ({ data }) => {
   const { cart, dispatch } = useContext(cartContext);
-  const { title, price, images, id, category } = data;
+  const { title, price, image, id, category } = data;
   const quantity = quantityCount(cart, id);
 
   return (
     <div className="proContainer">
-      <img className="proCardImage" src={images[0]} alt={title} />
+      <img className="proCardImage" src={image} alt={title} />
       <h3>{title}</h3>
       <p>{category.name}</p>
       <p>{price}$</p>

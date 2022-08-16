@@ -7,15 +7,15 @@ import trashIcon from "../../assets//icons8-trash.svg";
 import { cartContext } from "../../context/CartContextProvider";
 
 // Styles
-import './Cart.scss'
+import "./Cart.scss";
 
 const Cart = ({ data }) => {
   const { dispatch } = useContext(cartContext);
-  const { images, title, price, quantity } = data;
+  const { image, title, price, quantity } = data;
 
   return (
     <div className="cartContainer">
-      <img className="cartProductImage" src={images[0]} alt="product" />
+      <img className="cartProductImage" src={image} alt="product" />
       <div className="cartData">
         <h3>{title}</h3>
         <p>{price}$</p>
